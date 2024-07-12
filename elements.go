@@ -2,12 +2,12 @@ package gohtml
 
 func P(attrs ...Attribute) Element {
 	return func(inner string) string {
-		return FormatElement("p", attrs, inner)
+		return formatElement("p", attrs, inner)
 	}
 }
 
 func Div(attrs ...Attribute) Element {
 	return func(inner string) string {
-		return FormatElement("div", attrs, inner)
+		return formatElement("div", attrs, inner)
 	}
 }

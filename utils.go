@@ -2,7 +2,7 @@ package gohtml
 
 import "fmt"
 
-func FormatElement(name string, attributes []Attribute, content string) string {
+func formatElement(name string, attributes []Attribute, content string) string {
 	attrString := ""
 	for _, attr := range attributes {
 		attrString += attr()
@@ -10,6 +10,6 @@ func FormatElement(name string, attributes []Attribute, content string) string {
 	return fmt.Sprintf("<%s %s>%s</%s>", name, attrString, content, name)
 }
 
-func FormatAttribute(name string, value string) string {
+func formatAttribute(name string, value string) string {
 	return fmt.Sprintf("%s=\"%s\"", name, value)
 }
