@@ -7,6 +7,6 @@ import (
 )
 
 func TestP(testing *testing.T) {
-	element := p(class_("hi", "hey"))("Hello")
+	element := p(Class_("hi", "hey"))("Hello")
 	assert.Equal(testing, element, `<p class="hi hey">Hello</p>`)
 }
